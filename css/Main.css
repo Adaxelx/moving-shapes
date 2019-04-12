@@ -55,7 +55,7 @@ section{
     width: 50vh;
     background-color: royalblue;
     position: absolute;
-    transform: rotate(-15deg);
+    transform: rotate(-25deg);
     left: 90%;
     top: -20%;
 }
@@ -77,4 +77,10 @@ section{
     top: 30vh;
     font-size: 3rem;
     left: 5%;
+}
+
+section:nth-of-type(2){
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
 }
