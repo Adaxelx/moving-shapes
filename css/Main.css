@@ -5,13 +5,13 @@
 }
 
 section{
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     background-color: darkblue;
 }
 
 .shapesCon{
-    height: 100%;
+    height: 150vh;
     width: 100%;
     position: absolute;
     overflow: hidden;
@@ -20,7 +20,7 @@ section{
 }
 
 .circle{
-    position: absolute;
+    position: fixed;
     width: 50vh;
     height: 50vh;
     border-radius: 50%;
@@ -35,14 +35,14 @@ section{
     height: 60vh;
     background-color: green;
     transform: rotate(-25deg);
-    position: absolute;
+    position: fixed;
     top: 40%;
     left: -50%;
     z-index: 2;
 }
 
 .rect{
-    height: 120vh;
+    height: 200vh;
     width: 30vh;
     background-color: plum;
     position: absolute;
@@ -62,7 +62,7 @@ section{
 .rect3{
     height: 60vh;
     width: 40vh;
-    position: absolute;
+    position: fixed;
     background-color: orange;
     transform: rotate(30deg);
     z-index: 0;
@@ -74,7 +74,7 @@ section{
     color: white;
     position: absolute;
     z-index: 3;
-    top: 30%;
+    top: 30vh;
     font-size: 3rem;
     left: 5%;
 }
