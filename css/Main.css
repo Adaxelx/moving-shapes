@@ -15,6 +15,8 @@ section{
     width: 100%;
     position: absolute;
     overflow: hidden;
+    top:0;
+    left:0;
 }
 
 .circle{
@@ -22,7 +24,7 @@ section{
     width: 50vh;
     height: 50vh;
     border-radius: 50%;
-    background-color: yellow;
+    background-color: #fcc808;
     z-index: 1;
     top:40%;
     left: 20%;
@@ -66,4 +68,13 @@ section{
     z-index: 0;
     top: 30%;
     left: 80%;
+}
+
+.title{
+    color: white;
+    position: absolute;
+    z-index: 3;
+    top: 30%;
+    font-size: 3rem;
+    left: 5%;
 }
