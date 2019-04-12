@@ -17,12 +17,42 @@ section{
     overflow: hidden;
 }
 
-.square{
+.circle{
     position: absolute;
-    width: 40vh;
-    height: 40vh;
+    width: 50vh;
+    height: 50vh;
     border-radius: 50%;
     background-color: yellow;
     top:40%;
     left: 20%;
+}
+
+.square{
+    width: 60vh;
+    height: 60vh;
+    background-color: green;
+    transform: rotate(-25deg);
+    position: absolute;
+    top: 40%;
+    left: -40%;
+    z-index: 1
+}
+
+.rect{
+    height: 120vh;
+    width: 30vh;
+    background-color: plum;
+    position: absolute;
+    left: -30%;
+    z-index: 2;
+}
+
+.rect2{
+    height: 120vh;
+    width: 50vh;
+    background-color: royalblue;
+    position: absolute;
+    transform: rotate(-30deg);
+    left: 95%;
+    top: -20%;
 }
