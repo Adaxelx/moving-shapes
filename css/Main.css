@@ -35,7 +35,7 @@ section{
     height: 60vh;
     background-color: green;
     transform: rotate(-25deg);
-    position: fixed;
+    position: absolute;
     top: 40%;
     left: -50%;
     z-index: 2;
