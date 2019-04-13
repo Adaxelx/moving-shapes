@@ -7,6 +7,8 @@ const container2 = document.querySelector('section:nth-of-type(2)')
 const container2Off = container2.offsetTop;
 const textCon = document.querySelector('.textCon')
 const textConH = textCon.offsetHeight;
+
+
 /* shapes */ 
 
 const square = document.querySelector('.square');
@@ -17,9 +19,8 @@ const rect2Height = rect2.offsetHeight;
 const rect2Off = rect2.offsetTop;
 let scrollValue;
 
-
 const handleScroll = () =>{
-    let prevScroll;
+    
     scrollValue = window.scrollY;
     square.style.left = `${ -40-scrollValue/10}%`
     square.style.top = `${containerH*0.3 + scrollValue}px`
@@ -29,8 +30,10 @@ const handleScroll = () =>{
     if(scrollValue > 100) rect2.style.top = `${-containerH*0.2 + scrollValue-100}px`;
 
     if(scrollValue>container2Off - container2.offsetHeight){
-        textCon.style.height = `${textConH + scrollValue - 450}px`
+        textCon.style.height = `${textConH + scrollValue/1.2 + window.innerHeight - container2Off }px`
     }
+
+    /* scroll niższego elementu od 0 - wartość scrolla + wysokość okna  - odległość elementu od poczatku strony */ 
 }
 
 
