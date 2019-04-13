@@ -3,11 +3,13 @@
     margin:0;
     box-sizing: border-box;
 }
+.container{
+    background-color: darkblue;
+}
 
 section{
     height: 150vh;
     width: 100%;
-    background-color: darkblue;
 }
 
 .shapesCon{
@@ -36,8 +38,8 @@ section{
     background-color: green;
     transform: rotate(-25deg);
     position: absolute;
-    top: 40%;
-    left: -50%;
+    top: 30%;
+    left: -40%;
     z-index: 2;
 }
 
@@ -46,8 +48,10 @@ section{
     width: 30vh;
     background-color: plum;
     position: absolute;
-    left: -30%;
+    left: -35%;
     z-index: 2;
+    top:-5vh;
+    transform: rotate(2deg)
 }
 
 .rect2{
@@ -82,5 +86,14 @@ section{
 section:nth-of-type(2){
     height: 100vh;
     width: 100%;
-    background-color: gray;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.textCon{
+    border-radius: 300px 300px 0 0;
+    background-color: yellow;
+    height: 80vh;
+    width: 100%;
 }
