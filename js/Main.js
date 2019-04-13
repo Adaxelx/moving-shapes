@@ -19,16 +19,17 @@ let scrollValue;
 
 
 const handleScroll = () =>{
+    let prevScroll;
     scrollValue = window.scrollY;
     square.style.left = `${ -40-scrollValue/10}%`
     square.style.top = `${containerH*0.3 + scrollValue}px`
     circle.style.left = `${20+scrollValue/5}%`
     rect3.style.left = `${80+scrollValue/5}%`
+
     if(scrollValue > 100) rect2.style.top = `${-containerH*0.2 + scrollValue-100}px`;
 
     if(scrollValue>container2Off - container2.offsetHeight){
-        console.log(textConH)
-        textCon.style.height = `${textConH}px`
+        textCon.style.height = `${textConH + scrollValue - 450}px`
     }
 }
 
