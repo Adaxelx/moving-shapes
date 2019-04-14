@@ -22,12 +22,14 @@ let scrollValue;
 const handleScroll = () =>{
     
     scrollValue = window.scrollY;
-    square.style.left = `${ -40-scrollValue/10}%`
-    square.style.top = `${containerH*0.3 + scrollValue}px`
-    circle.style.left = `${20+scrollValue/5}%`
-    rect3.style.left = `${80+scrollValue/5}%`
+    // square.style.left = `${ -40-scrollValue/10}%`
+    // square.style.top = `${containerH*0.3 + scrollValue}px`
+    square.style.transform = `translateX(${-scrollValue/10}%) translateY(${scrollValue}px) rotate(-25deg)`
+    circle.style.transform = `translateX(${scrollValue/5}%)`
+    rect3.style.transform = `translateX(${scrollValue/5}%) rotate(30deg)`
 
-    if(scrollValue > 100) rect2.style.top = `${-containerH*0.2 + scrollValue-100}px`;
+    // if(scrollValue > 100) rect2.style.top = `${-containerH*0.2 + scrollValue-100}px`;
+    if(scrollValue > 100) rect2.style.transform = `translateY(${scrollValue-100}px) rotate(-25deg)`
 
     if(scrollValue>container2Off - container2.offsetHeight){
         textCon.style.height = `${textConH + scrollValue/1.2 + window.innerHeight - container2Off }px`
