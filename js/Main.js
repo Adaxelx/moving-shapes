@@ -47,7 +47,7 @@ const handleScroll = () =>{
     }
     if(scrollValue>container3Off - windowH){
        
-       bgc.style.transform = `translateX(${scrollValue*1.35 - container3Off + windowH}px) rotate(-30deg)`
+       bgc.style.transform = `translateX(${scrollValue*1.3 - container3Off + windowH}px) rotate(-30deg)`
     }
 
 

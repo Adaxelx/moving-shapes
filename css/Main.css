@@ -108,6 +108,7 @@ section:nth-of-type(3){
     align-items: flex-end;
     overflow: hidden;
     position: absolute;
+    background-color: #fff;
 }
 
 .bgc{
@@ -118,4 +119,12 @@ section:nth-of-type(3){
     background-color: gray;
     left:-330%;
     transform: rotate(-30deg)
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: white;
+    font-size: 1.5rem;
 }
