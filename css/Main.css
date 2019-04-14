@@ -5,6 +5,8 @@
 }
 .container{
     background-color: darkblue;
+    position: relative;
+    height: 310vh;
 }
 
 section{
@@ -30,6 +32,7 @@ section{
     z-index: 1;
     top:40%;
     left: 20%;
+    transform: translateX(0);
 }
 
 .square{
@@ -45,10 +48,10 @@ section{
 
 .rect{
     height: 200vh;
-    width: 30vh;
+    width: 15vh;
     background-color: plum;
     position: absolute;
-    left: -35%;
+    left: -6%;
     z-index: 2;
     top:-5vh;
     transform: rotate(2deg)
@@ -96,4 +99,23 @@ section:nth-of-type(2){
     background-color: yellow;
     height: 60vh;
     width: 100%;
+}
+
+section:nth-of-type(3){
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    position: absolute;
+}
+
+.bgc{
+    position: absolute;
+    width: 200%;
+    height: 150vh;
+    top: -50%;
+    background-color: gray;
+    left:-250%;
+    transform: rotate(-30deg)
 }

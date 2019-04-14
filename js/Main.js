@@ -3,11 +3,17 @@
 const container = document.querySelector('.shapesCon')
 const containerH = container.offsetHeight;
 const containerOff = container.offsetTop;
+
+
 const container2 = document.querySelector('section:nth-of-type(2)')
 const container2Off = container2.offsetTop;
 const textCon = document.querySelector('.textCon')
 const textConH = textCon.offsetHeight;
 
+const container3 = document.querySelector('section:nth-of-type(3)')
+const container3Off = container3.offsetTop;
+const bgc = document.querySelector('.bgc')
+const bgcH = bgc.offsetHeight;
 
 /* shapes */ 
 
@@ -29,13 +35,19 @@ const handleScroll = () =>{
     rect3.style.transform = `translateX(${scrollValue/5}%) rotate(30deg)`
 
     // if(scrollValue > 100) rect2.style.top = `${-containerH*0.2 + scrollValue-100}px`;
+
     if(scrollValue > 100) rect2.style.transform = `translateY(${scrollValue-100}px) rotate(-25deg)`
 
     if(scrollValue>container2Off - container2.offsetHeight){
-        textCon.style.height = `${textConH + scrollValue/1.2 + window.innerHeight - container2Off }px`
+        textCon.style.height = `${scrollValue*1.3 - container2Off + window.innerHeight}px`
+    }
+    if(scrollValue>container3Off - window.innerHeight){
+       
+       bgc.style.transform = `translateX(${scrollValue*1.2 - container3Off + window.innerHeight}px) rotate(-30deg)`
     }
 
-    /* scroll niższego elementu od 0 - wartość scrolla + wysokość okna  - odległość elementu od poczatku strony */ 
+
+    /* wartość scrolla - offset kontenera + wysokość okna*/ 
 }
 
 
