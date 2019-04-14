@@ -23,6 +23,10 @@ const rect3 = document.querySelector('.rect3')
 const rect2 = document.querySelector('.rect2')
 const rect2Height = rect2.offsetHeight;
 const rect2Off = rect2.offsetTop;
+
+/* variables */
+
+let windowH = window.innerHeight;
 let scrollValue;
 
 const handleScroll = () =>{
@@ -39,11 +43,11 @@ const handleScroll = () =>{
     if(scrollValue > 100) rect2.style.transform = `translateY(${scrollValue-100}px) rotate(-25deg)`
 
     if(scrollValue>container2Off - container2.offsetHeight){
-        textCon.style.height = `${scrollValue*1.3 - container2Off + window.innerHeight}px`
+        textCon.style.height = `${scrollValue*1.3 - container2Off + windowH}px`
     }
-    if(scrollValue>container3Off - window.innerHeight){
+    if(scrollValue>container3Off - windowH){
        
-       bgc.style.transform = `translateX(${scrollValue*1.2 - container3Off + window.innerHeight}px) rotate(-30deg)`
+       bgc.style.transform = `translateX(${scrollValue*1.35 - container3Off + windowH}px) rotate(-30deg)`
     }
 
 
