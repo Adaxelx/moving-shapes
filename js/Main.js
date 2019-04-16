@@ -15,7 +15,7 @@ const container3Off = container3.offsetTop;
 const bgc = document.querySelector('.bgc')
 const bgcH = bgc.offsetHeight;
 
-/* shapes */ 
+/* shapes */
 
 const square = document.querySelector('.square');
 const circle = document.querySelector('.circle');
@@ -30,31 +30,35 @@ let windowH = window.innerHeight;
 let scrollValue;
 
 const handleScroll = () =>{
-    
+
     scrollValue = window.scrollY;
     // square.style.left = `${ -40-scrollValue/10}%`
     // square.style.top = `${containerH*0.3 + scrollValue}px`
     square.style.transform = `translateX(${-scrollValue/10}%) translateY(${scrollValue}px) rotate(-25deg)`
-    circle.style.transform = `translateX(${scrollValue/5}%)`
-    rect3.style.transform = `translateX(${scrollValue/5}%) rotate(30deg)`
+    circle.style.transform = `translateX(${scrollValue/2}px) translateY(${scrollValue}px)`
+    rect3.style.transform = `rotate(30deg) translateX(${scrollValue}px)  translateY(${scrollValue}px)`
 
     // if(scrollValue > 100) rect2.style.top = `${-containerH*0.2 + scrollValue-100}px`;
 
     if(scrollValue > 100) rect2.style.transform = `translateY(${scrollValue-100}px) rotate(-25deg)`
 
     if(scrollValue>container2Off - container2.offsetHeight){
-        textCon.style.height = `${scrollValue*1.3 - container2Off + windowH}px`
+        textCon.style.height = `${scrollValue*1.6 - container2Off + windowH}px`
     }
-    if(scrollValue>container3Off - windowH){
-       
+    if(scrollValue > container3Off - windowH && window.innerWidth >=568){
+        bgc.style.transform = `translateX(${scrollValue *2.5 - container3Off + windowH}px) rotate(-30deg)`
+    }
+    else if(scrollValue>container3Off - windowH){
+        console.log('xD')
        bgc.style.transform = `translateX(${scrollValue*1.3 - container3Off + windowH}px) rotate(-30deg)`
     }
 
 
-    /* wartość scrolla - offset kontenera + wysokość okna*/ 
+    /* wartość scrolla - offset kontenera + wysokość okna*/
 }
 
 
 
 
 window.addEventListener('scroll',handleScroll)
+

@@ -25,13 +25,13 @@ section{
 
 .circle{
     position: absolute;
-    width: 50vh;
-    height: 50vh;
+    width:  250px;
+    height: 250px;
     border-radius: 50%;
     background-color: #fcc808;
     z-index: 1;
-    top:40%;
-    left: 20%;
+    top:30%;
+    left: 30%;
     transform: translateX(0);
 }
 
@@ -140,15 +140,6 @@ section:nth-of-type(3){
     .rect {
         width: 100px;
         left: -7%;
-    }
-    .rect2 {
-        height: 100vh;
-        width: 50vh;
-        background-color: royalblue;
-        position: absolute;
-        transform: rotate(-25deg);
-        left: 90%;
-        top: -20%;
     }
     .title {
         top: 20vh;
